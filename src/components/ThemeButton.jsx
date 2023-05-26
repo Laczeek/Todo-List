@@ -7,7 +7,6 @@ import { getThemeFromLocalStorage } from '../store/ui-actions';
 import styles from './ThemeButton.module.css';
 
 const ThemeButton = () => {
-	console.log('THEME BUTTON RENDER');
 	const theme = useSelector(state => state.ui.theme);
 
 	const dispatch = useDispatch();
@@ -24,8 +23,6 @@ const ThemeButton = () => {
 	useEffect(() => {
 		dispatch(getThemeFromLocalStorage());
 	}, []);
-
-
 
 	return (
 		<button className={`${styles.button} ${theme === 'dark' ? styles.darkMode : ''}`} onClick={changeThemeHandler}>

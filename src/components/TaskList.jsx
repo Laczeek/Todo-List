@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { useDispatch } from 'react-redux';
 
 import { removeAllTasksWithLocalStorage } from '../store/tasks-actions';
@@ -7,7 +8,6 @@ import ListItem from './ListItem';
 import styles from './TaskList.module.css';
 
 const TaskList = ({ tasks, filterMethod }) => {
-	console.log('TASKS LIST RENDER');
 	const dispatch = useDispatch();
 
 	const removeAllTasks = () => {
@@ -45,4 +45,4 @@ const TaskList = ({ tasks, filterMethod }) => {
 	);
 };
 
-export default TaskList;
+export default memo(TaskList);

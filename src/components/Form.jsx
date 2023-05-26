@@ -10,7 +10,6 @@ import { endEditMode, showAlert } from '../store/uiSlice';
 import styles from './Form.module.css';
 
 const Form = () => {
-	console.log('FORM RENDERED');
 	const [taskName, setTaskName] = useState('');
 	const edit = useSelector(state => state.ui.edit);
 	const inputRef = useRef();

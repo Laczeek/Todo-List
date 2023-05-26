@@ -9,8 +9,6 @@ const Alert = () => {
 	const alert = useSelector(state => state.ui.alert);
 	const dispatch = useDispatch();
 
-	console.log('renderuje sie');
-
 	useEffect(() => {
 		if (!alert.showAlert) {
 			return;
