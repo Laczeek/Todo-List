@@ -1,0 +1,30 @@
+.colors {
+	position: absolute;
+	right: -80px;
+	width: 100px;
+	height: 80px;
+	border-radius: 10px;
+	background-color: #ffffffc5;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 2px;
+	padding: 2px;
+	animation: showPalette 0.3s linear;
+}
+.colors span {
+	width: 31%;
+	height: 30%;
+	border-radius: 5px;
+    cursor: pointer;
+}
+
+@keyframes showPalette {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}

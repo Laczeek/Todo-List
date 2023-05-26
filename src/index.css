@@ -1,0 +1,72 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+:root {
+	--primary-button: #607d8b;
+	--secondary-button: #95b5c7;
+	--container: #69979e;
+	--font-color: #ffffff;
+	--alt-font-color: #222222;
+	--background: #95d8e2;
+}
+.dark {
+	--primary-button: #008e9f;
+	--secondary-button: #00e4ff;
+	--container: #0000004d;
+	--font-color: #ffffff;
+	--alt-font-color: #222222;
+	--background: #003950;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	position: relative;
+	min-height: 100vh;
+	font-size: 1.6rem;
+	background-color: var(--background);
+	color: var(--font-color);
+	padding: 80px 0;
+	transition: background-color 0.3s;
+}
+::-webkit-scrollbar {
+    border-radius: 10px;
+    width: 1rem;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #00b3b3;
+    border-radius: 10px;
+    height: 50px;
+    outline: 0 inset #7fffd4;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+}
+
+.btn {
+	cursor: pointer;
+	font-size: 1.6rem;
+	border: none;
+	border-radius: 10px;
+	padding: 0.8em 2em;
+	color: white;
+	transition: opacity 0.3s, background-color 0.3s;
+}
+.btn:hover {
+	opacity: 0.7;
+}
+.btnPrimary {
+	background-color: var(--primary-button);
+}
+.btnSecondary {
+	background-color: var(--secondary-button);
+	color: var(--alt-font-color);
+}

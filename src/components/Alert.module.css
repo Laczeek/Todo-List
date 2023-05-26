@@ -1,0 +1,39 @@
+.alert {
+	position: absolute;
+	bottom: 2%;
+	left: 2%;
+	transform: translateX(-200%);
+	width: 230px;
+	height: 80px;
+	border-radius: 3px;
+	background-color: #fff;
+	color: var(--alt-font-color);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.active {
+	animation: showAlert 3s linear;
+}
+
+@keyframes showAlert {
+	0% {
+		transform: translateX(-200%);
+	}
+	20% {
+		transform: translateX(0);
+	}
+	40% {
+		transform: translateX(0);
+	}
+	60% {
+		transform: translateX(0);
+	}
+	80% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-200%);
+	}
+}

@@ -1,0 +1,20 @@
+.list {
+    list-style: none;
+    max-height: 381px;
+    margin: 0 auto;
+    padding: 0 50px;
+    overflow-y:auto;
+}
+.list li:last-child {
+    margin-bottom: 0;
+}
+.clearBtn {
+    margin-top: 2em;
+   background-color:  #ba0f30;
+}
+
+@media (max-width:768px) {
+   .list {
+    padding: 0 5px;
+   }
+}
