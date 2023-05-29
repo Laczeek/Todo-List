@@ -1,6 +1,8 @@
 import { useDispatch } from 'react-redux';
+
 import { editTaskWithLocalStorage } from '../store/tasks-actions';
 import { showPaletteWithId } from '../store/uiSlice';
+
 import styles from './ColorsContainer.module.css';
 
 const ColorsContainer = ({ taskId, distance }) => {

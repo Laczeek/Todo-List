@@ -6,6 +6,7 @@ export const setThemeWithLocalStorage = () => {
 		dispatch(changeTheme());
 		const newColor = getState().ui.theme;
 		localStorage.setItem('theme', JSON.stringify(newColor));
+
 		dispatch(showAlert({showAlert: true, message: 'Background color changed.'}))
 	};
 };
@@ -13,6 +14,7 @@ export const setThemeWithLocalStorage = () => {
 export const getThemeFromLocalStorage = () => {
     return dispatch => {
         const theme = JSON.parse(localStorage.getItem('theme'));
+		
         dispatch(changeTheme(theme));
     }
 }

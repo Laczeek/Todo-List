@@ -1,38 +1,42 @@
 .task {
-    margin-bottom: 1em;
-    padding: 0.4em 1em;
-    border-radius: 10px;
-    transition: opacity 0.3s;
+	margin-bottom: 1em;
+	padding: 0.4em 1em;
+	border-radius: 10px;
+	transition: opacity 0.3s, box-shadow 0.3s;
+	cursor: grab;
+}
+.dragging.task{
+	box-shadow: 0 0 5px 5px #00658d;
+	opacity: 1 ;
 }
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    overflow-x: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	overflow-x: auto;
 }
 .btn {
-    cursor: pointer;
-    border: none;
-    background: none;
-    padding: 0.8em;
-    margin-right: 0.3em;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    transition: background-color 0.3s linear;
+	cursor: pointer;
+	border: none;
+	background: none;
+	padding: 0.8em;
+	margin-right: 0.3em;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+	transition: background-color 0.3s linear;
 }
 .btn img {
-   pointer-events: none;
+	pointer-events: none;
 }
 .btn:hover {
-   background-color: #ffffff65;
-
+	background-color: #ffffff65;
 }
 .taskDone {
-    opacity: 0.5;
+	opacity: 0.5;
 }
 .taskDone p {
-    text-decoration: line-through;
+	text-decoration: line-through;
 }

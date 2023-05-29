@@ -45,3 +45,10 @@ export const editTaskWithLocalStorage = editObj => {
 		dispatch(showAlert({showAlert: true, message: 'Task edited.'}))
 	};
 };
+
+export const updateTasksWithLocalStorage = updatedTasks => {
+return (dispatch) => {
+	dispatch(tasksActions.updateList(updatedTasks));
+	localStorage.setItem('tasks', JSON.stringify(updatedTasks));
+}
+}

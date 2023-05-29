@@ -2,8 +2,9 @@
     list-style: none;
     max-height: 381px;
     margin: 0 auto;
-    padding: 0 50px;
+    padding: 10px 50px;
     overflow-y:auto;
+   
 }
 .list li:last-child {
     margin-bottom: 0;
@@ -15,6 +16,6 @@
 
 @media (max-width:768px) {
    .list {
-    padding: 0 5px;
+    padding: 10px 5px;
    }
 }

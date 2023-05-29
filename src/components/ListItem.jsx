@@ -1,4 +1,6 @@
 import { useDispatch } from 'react-redux';
+import { useSortable } from '@dnd-kit/sortable';
+import { CSS } from '@dnd-kit/utilities';
 
 import { removeTaskWithLocalStorage } from '../store/tasks-actions';
 import { startEditMode } from '../store/uiSlice';
@@ -13,8 +15,24 @@ import taskDoneIcon from '/taskDoneIcon.svg';
 
 import styles from './ListItem.module.css';
 
-const ListItem = ({ name, id, isCompleted, color }) => {
+const ListItem = ({ name, id, isCompleted, color}) => {
 	const dispatch = useDispatch();
+
+	const { attributes, listeners, setNodeRef, transform, transition, isDragging } = useSortable({ id });
+
+	let style = {
+		transform: CSS.Transform.toString(transform),
+		transition,
+		backgroundColor: '#029789',
+	};
+	
+	if (color !== 'default') {
+		style = {
+			transform: CSS.Transform.toString(transform),
+			transition,
+			backgroundColor: color,
+		};
+	}
 
 	const finishIcon = isCompleted ? taskDoneIcon : squareIcon;
 
@@ -26,8 +44,11 @@ const ListItem = ({ name, id, isCompleted, color }) => {
 
 	return (
 		<li
-			className={`${styles.task} ${isCompleted ? styles.taskDone : ''}`}
-			style={color === 'default' ? { backgroundColor: '#029789' } : { backgroundColor: color }}
+			ref={setNodeRef}
+			{...attributes}
+			{...listeners}
+			className={`${styles.task} ${isCompleted ? styles.taskDone : ''} ${isDragging && styles.dragging}`}
+			style={style}
 			id={id}>
 			<div className={styles.container}>
 				<p>{name}</p>
