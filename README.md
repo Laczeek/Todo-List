@@ -1,2 +1,20 @@
 # Todo-List
-cosik
+Simple web application, customisable and saved in local storage.
+# Inspiration
+I was inspired by the work of ilyasbelaoud.
+Link to his repo: https://github.com/ilyasbelaoud/react-todo-app/tree/main
+Instagram - @ilyasbelaoud
+Twitter - @ilyasbelaoud
+# Features
+- Dark mode
+- Drag n drop
+- Every action is saved locally
+- Alert on almost every action
+- Every task item is customisable
+# Built with
+- Vite
+- React
+- Redux toolkit
+- DnD kit
+- uuidv4
+
