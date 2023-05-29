@@ -7,7 +7,7 @@ Instagram - @ilyasbelaoud
 Twitter - @ilyasbelaoud
 # Live Demo
 Hosted on Vercel
-Link: todo-list-gamma-ten-13.vercel.app
+Link: https://todo-list-laczeek.vercel.app/
 # Features
 - Dark mode
 - Drag n drop
